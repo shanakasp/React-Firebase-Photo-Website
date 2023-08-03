@@ -1,7 +1,7 @@
-import firebase from 'firebase/app'; // Import firebase from 'firebase/app'
-import 'firebase/storage';
-import 'firebase/firestore';
-import 'firebase/analytics'; // Import the analytics module
+import firebase from "firebase/compat/app"; // Import firebase from 'firebase/app'
+import "firebase/compat/storage";
+import "firebase/compat/firestore";
+import "firebase/compat/analytics"; // Import the analytics module
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -12,7 +12,7 @@ const firebaseConfig = {
   storageBucket: "react-firebase-photo-portfolio.appspot.com",
   messagingSenderId: "797795108540",
   appId: "1:797795108540:web:78b79d047d0939794872b9",
-  measurementId: "G-SXDPE27H9Y"
+  measurementId: "G-SXDPE27H9Y",
 };
 
 // Initialize Firebase
