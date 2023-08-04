@@ -5,7 +5,7 @@ const useFirestore = (collection) => {
   const [docs, setDocs] = useState([]);
 
   useEffect(() => {
-    projectFirestore
+    const unsub = projectFirestore
       .collection(collection)
       .orderBy("createdAt", "desc")
       .onSnapshot((snap) => {
@@ -15,7 +15,10 @@ const useFirestore = (collection) => {
         });
         setDocs(document);
       });
+    return () => unsub();
   }, [collection]);
 
   return { docs };
 };
+
+export default useFirestore;
